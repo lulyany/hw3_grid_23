@@ -13,11 +13,11 @@ body{
 
 .overview{
   background-attachment: fixed; /* Parallax effect */     
-  background-position: center;  /* Parallax effect */
+  /* background-position: center;  Parallax effect */
   background-repeat: no-repeat; /* Parallax effect */
   background-size: cover;       /* Parallax effect */
   color: white;
-  height: 400px;                /* Parallax effect */
+  height: 400px;               /* Parallax effect */ 
 }
 
 
@@ -134,22 +134,24 @@ nav a:hover, nav a:focus{
 /* Step 4: Write selector/rule property to style the container */
 
 
-  .container{
-    display: grid;
-    grid-template-columns: 1fr 5fr 1fr;
-    row-gap: 15px;
-    align-items: center;
-  } 
+.container{
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  row-gap: 15px;
+  align-items: center;
+} 
 
 
 /* Step 5: Write selector/rule property to add the background image to the 
 first div in the grid  and place it in the grid. */
 
-div:first-child{
+main div:first-child{
   grid-column: 1 / -1;
   background-image: url("../images/header.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: contain;
+  /* background-position: center center; */
 }
 
 
@@ -223,7 +225,7 @@ div:first-child{
 
   /* Steps 11 and 12: Update the grid-column property of the grid's children (where-needed)*/
 
-  .about, .clients, .method-image, .contacts-image{
+  .about, .clients, .method-image, .contact-image{
     grid-column: 3 / span 2;
   }
   
@@ -234,6 +236,10 @@ div:first-child{
   .text-block{
     max-height: 250px;
     overflow: auto;
+  }
+
+  .method-image, .contact-image, .about-image, .clients-image{
+    max-height: 400px;
   }
 
 }
