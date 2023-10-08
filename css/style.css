@@ -13,9 +13,9 @@ body{
 
 .overview{
   background-attachment: fixed; /* Parallax effect */     
-  /* background-position: center;  Parallax effect */
+  /* background-position: center; Parallax effect       */
   background-repeat: no-repeat; /* Parallax effect */
-  background-size: cover;       /* Parallax effect */
+  background-size: contain;       /* Parallax effect */
   color: white;
   height: 400px;               /* Parallax effect */ 
 }
@@ -148,9 +148,9 @@ first div in the grid  and place it in the grid. */
 main div:first-child{
   grid-column: 1 / -1;
   background-image: url("../images/header.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: contain;
+  /* background-repeat: no-repeat; */
+  /* background-attachment: fixed; */
+  /* background-size: contain; */
   /* background-position: center center; */
 }
 
